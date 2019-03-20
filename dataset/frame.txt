@@ -1,0 +1,34 @@
+<annotation>
+	<folder></folder>
+	<filename></filename>
+	<source>
+		<database>Custom</database>
+		<annotation>OCR VOC</annotation>
+		<image>handmaking</image>
+		<flickridd>?</flickrid>
+	</source>
+	<owner>
+		<flickrid>LE</flickrid>
+		<name>?</name>
+	</owner>
+
+	<size>
+		<width></width>
+		<height></height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name></name>
+		<pose>Frontal</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin></xmin>
+			<ymin></ymin>
+			<xmax></xmax>
+			<ymax></ymax>
+		<bndbox>
+
+	</object>
+</annotation>	
