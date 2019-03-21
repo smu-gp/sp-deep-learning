@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 #!/usr/bin/env python
@@ -127,7 +127,7 @@ for character in labels:
         for i in range(DISTORTION_COUNT):
             total_count += 1
             file_string = 'hangul_{}.jpeg'.format(total_count)
-            file_path = os.path.join(img_output_dir, file_string)
+            file_path = os.path.join(image_dir, file_string)
             arr = numpy.array(image)
 
             distorted_array = elastic_distort(
