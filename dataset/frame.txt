@@ -5,7 +5,7 @@
 		<database>Custom</database>
 		<annotation>OCR VOC</annotation>
 		<image>handmaking</image>
-		<flickridd>?</flickrid>
+		<flickrid>?</flickrid>
 	</source>
 	<owner>
 		<flickrid>LE</flickrid>
@@ -28,7 +28,7 @@
 			<ymin></ymin>
 			<xmax></xmax>
 			<ymax></ymax>
-		<bndbox>
+		</bndbox>
 
 	</object>
 </annotation>	

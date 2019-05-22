@@ -19,7 +19,7 @@ from scipy.ndimage.filters import gaussian_filter
 
 
 # Default data paths.
-DEFAULT_LABEL_FILE ='./labels'
+DEFAULT_LABEL_FILE ='./labels/2350-common-hangul.txt'
 DEFAULT_FONTS_DIR ='./fonts'
 DEFAULT_OUTPUT_DIR_IMAGE ='./data/image-data'
 DEFAULT_OUTPUT_DIR_XML = './data/annotation'
@@ -97,8 +97,7 @@ for character in labels:
     w, h = drawing.textsize(character, font=font)
     #drawing.text(get_x, get_y ,character,fill=(255),font=font)
     drawing.text((get_x, get_y),character,fill=(255),font=font)
-    file_string = 'hangul_{}.jpeg'.format(total_count)
-    print(file_string)
+    file_string = 'hangul_{}.jpeg'.format(total_count)  
     file_path = os.path.join(image_dir, file_string)
     image.save(file_path, 'JPEG')
     xml_file_string = 'hangul_{}.xml'.format(total_count) 
@@ -108,7 +107,7 @@ for character in labels:
     lines = f1.readlines()
     for i in range(0,len(lines)):
       if "<folder>" in lines[i]:
-        lines[i] = lines[i].replace("<folder>","<folder>"+str(img_output_dir))
+        lines[i] = lines[i].replace("<folder>","<folder>"+'hangul-images')
       if "<filename>" in lines[i]:
         lines[i]=lines[i].replace("<filename>","<filename>"+str(file_string))
       if "<width>" in lines[i] :
@@ -136,7 +135,6 @@ for character in labels:
       total_count += 1
       file_string = 'hangul_{}.jpeg'.format(total_count)
       file_path = os.path.join(image_dir, file_string)
-      print(file_string)
       arr = numpy.array(image)
       distorted_array = elastic_distort(arr, alpha=random.randint(30, 36),sigma=random.randint(5, 6))
       distorted_image = Image.fromarray(distorted_array)
@@ -148,7 +146,7 @@ for character in labels:
       lines = f1.readlines()
       for i in range(0,len(lines)):
         if "<folder>" in lines[i]:
-          lines[i] = lines[i].replace("<folder>","<folder>"+str(img_output_dir))
+          lines[i] = lines[i].replace("<folder>","<folder>"+'hangul-images')
         if "<filename>" in lines[i]:
           lines[i]=lines[i].replace("<filename>","<filename>"+str(file_string))
         if "<width>" in lines[i] :
